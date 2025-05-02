@@ -42,13 +42,13 @@ NyayaMitra uses **Retrieval-Augmented Generation (RAG)** architecture:
 > All of this happens locally with **Ollama**, making it affordable, fast, and privacy-friendly.
 
 ---
-![Logo](images/img1)
-![Logo](images/img2)
-![Logo](images/img3)
-![Logo](images/img4)
-![Logo](images/img5)
-![Logo](images/img6)
-![Logo](images/img7)
+![Logo](images/img1.png)
+![Logo](images/img2.png)
+![Logo](images/img3.png)
+![Logo](images/img4.png)
+![Logo](images/img5.png)
+![Logo](images/img6.png)
+![Logo](images/img7.png)
 
 
 ## 📲 User Flows
