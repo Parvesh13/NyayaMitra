@@ -1,6 +1,3 @@
-# HackInia-Spark-7-2025-Pragati
-
-
 
 # 🧑‍⚖️ NyayaMitra – Your AI-Powered Legal Companion
 
@@ -52,12 +49,3 @@ NyayaMitra uses **Retrieval-Augmented Generation (RAG)** architecture:
 - Ask legal questions via chat
 - Get clear, accurate, law-based answers
 - Find and contact nearby lawyers
-
-### ⚖️ For Lawyers:
-- Register via the **“Become a Lawyer”** form
-- Upload details, documents, and select subscription plan
-- Post-approval, appear in the public **“Find a Lawyer”** directory
-
----
-
-
