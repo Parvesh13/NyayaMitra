@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 252 56% 57%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 252 56% 57%;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary transition-colors duration-200 px-4 py-2 rounded-md;
+  }
+
+  .nav-link-mobile {
+    @apply block text-foreground/80 hover:text-primary transition-colors duration-200 px-4 py-3 text-lg;
+  }
+
+  .nav-link.active {
+    @apply text-primary font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-all duration-200 font-medium shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-md transition-all duration-200 font-medium shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md transition-all duration-200 font-medium;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md bg-white/30 dark:bg-black/30 border border-white/20 dark:border-white/10 rounded-2xl shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 md:py-24 lg:px-8;
+  }
+
+  .input-field {
+    @apply block w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-900 transition-all duration-200;
+  }
+
+  .chat-bubble-user {
+    @apply bg-primary text-white p-4 rounded-2xl rounded-br-none shadow-md max-w-[80%] animate-fade-in;
+  }
+
+  .chat-bubble-bot {
+    @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-2xl rounded-bl-none shadow-md max-w-[80%] animate-fade-in;
+  }
+
+  .typing-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .typing-dots span {
+    @apply w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500;
+  }
+}
+
+/* Typing animation dots */
+.typing-dots span:nth-child(1) {
+  animation: bounce 1s infinite 0.1s;
+}
+.typing-dots span:nth-child(2) {
+  animation: bounce 1s infinite 0.3s;
+}
+.typing-dots span:nth-child(3) {
+  animation: bounce 1s infinite 0.5s;
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}

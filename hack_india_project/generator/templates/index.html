@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Legal Notice Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🇮🇳 Legal Notice Generator</h1>
+        <form action="{{ url_for('generate') }}" method="POST">
+            <div class="form-section">
+                <h2>Landlord Details</h2>
+                <label>Full Name <input type="text" name="landlord_name" required></label>
+                <label>Address <textarea name="landlord_address" required></textarea></label>
+            </div>
+            
+            <div class="form-section">
+                <h2>Tenant Details</h2>
+                <label>Tenant Name <input type="text" name="tenant_name" required></label>
+                <label>Property Address <textarea name="rental_address" required></textarea></label>
+            </div>
+            
+            <div class="form-section">
+                <h2>Rent Details</h2>
+                <label>Monthly Rent (₹) <input type="number" name="monthly_rent" required></label>
+                <label>Unpaid Months <input type="text" name="months_unpaid" required></label>
+                <label>Agreement Date <input type="date" name="agreement_date" required></label>
+            </div>
+            
+            <div class="form-section">
+                <h2>Notice Period</h2>
+                <label>Payment Deadline (days) <input type="number" name="payment_days" value="15" required></label>
+                <label>Vacation Notice (days) <input type="number" name="vacate_days" value="30" required></label>
+            </div>
+            
+            <button type="submit">Generate Notice</button>
+        </form>
+    </div>
+</body>
+</html>
