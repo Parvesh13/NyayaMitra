@@ -59,12 +59,5 @@ NyayaMitra uses **Retrieval-Augmented Generation (RAG)** architecture:
 - Post-approval, appear in the public **“Find a Lawyer”** directory
 
 ---
-## 📂 Project Structure
-📁 Project Root
-
-
-![Homepage Screenshot]("C:\Users\prabh\Pictures\Screenshots\Screenshot 2025-05-02 094613.png")
-![Homepage Screenshot](screenshot.png)
-![Homepage Screenshot](screenshot.png)
 
 
